@@ -8,6 +8,7 @@ import ui.pages.BasePage;
 public class TeamsCommonPage extends BasePage {
     String searchTerm;
 
+
     //Locators
     @FindBy(xpath = "//span[contains(text(),'+ Team')]")
     public static WebElement newTeambutton;

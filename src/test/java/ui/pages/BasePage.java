@@ -73,22 +73,27 @@ public class BasePage {
             element.clear();
         }
     }
-        //Screen size page screenshot
+
+    //Screen size page screenshot
     public static void takeSnapShot(WebDriver webdriver, String fileWithPath) throws Exception {
         TakesScreenshot scrShot = ((TakesScreenshot) webdriver);
         File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
         File DestFile = new File(fileWithPath);
         FileUtils.copyFile(SrcFile, DestFile);
     }
+
     //Whole page screenshot
     public static void takeAshotFullPage() throws IOException {
-        Screenshot  screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
-        ImageIO.write(screenshot.getImage(),"png", new File("C:\\Users\\Milan Gajic\\Documents\\QA JDP\\SeleniumSS\\Ashot\\fullpage.png"));
+        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+        ImageIO.write(screenshot.getImage(), "png", new File("C:\\Users\\Milan Gajic\\Documents\\QA JDP\\SeleniumSS\\Ashot\\fullpage.png"));
     }
+
     //Element screenshot
     public static void takeElementScreenshot(WebElement element) throws IOException {
-        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver,element);
-        ImageIO.write(screenshot.getImage(),"png", new File("C:\\Users\\Milan Gajic\\Documents\\QA JDP\\SeleniumSS\\Ashot\\element.png"));
+        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, element);
+        ImageIO.write(screenshot.getImage(), "png", new File("C:\\Users\\Milan Gajic\\Documents\\QA JDP\\SeleniumSS\\Ashot\\element.png"));
     }
+    //Pronaci drugi tool za screenshot
+
 
 }

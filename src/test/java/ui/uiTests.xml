@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="jdp_testing">
+    <test name="Simple_tests">
+        <classes>
+            <class name="ui.tests.logIn.LogInTest"/>
+            <class name="ui.tests.profilePage.basic.ProfileBasicTests"/>
+            <class name="ui.tests.teams.CreateTeam"/>
+        </classes>
+    </test><!-- Test -->
+</suite> <!-- Suite -->
