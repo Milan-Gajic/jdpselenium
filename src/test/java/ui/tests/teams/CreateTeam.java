@@ -11,9 +11,13 @@ import static ui.pages.BasePage.Wrapper.click;
 public class CreateTeam {
 
     BasicPage basicPage;
+    TeamsCommonPage teamsCommonPage;
+    AddTeamPage addTeamPage;
 
     public CreateTeam() {
         basicPage = new BasicPage();
+        teamsCommonPage = new TeamsCommonPage();
+        addTeamPage = new AddTeamPage();
     }
 
     @Test(priority = 3, enabled = true)
@@ -21,7 +25,6 @@ public class CreateTeam {
     public void addNewTeam() {
         click(basicPage.sideMenu);
         click(basicPage.sideMenuTeams);
-//    click(teamsCommonPage.newTeambutton);
         TeamsCommonPage.clickAddNewTeamButton();
         AddTeamPage.createTeam("Novi tim", "Deskripcija");
     }

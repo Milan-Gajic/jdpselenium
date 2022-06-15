@@ -2,9 +2,6 @@ package ui.pages.teams;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ui.pages.BasePage;
-
-import java.sql.Wrapper;
-
 import static ui.pages.BasePage.Wrapper.click;
 import static ui.pages.BasePage.Wrapper.typeIn;
 
@@ -24,7 +21,6 @@ public class AddTeamPage extends BasePage {
     static WebElement banjaLukabranch;
 
     public static void createTeam(String teamName, String teamDescription) {
-//        BasePage.Wrapper wrapper = new Wrapper();
         typeIn(teamNameInput,teamName);
         click(teamDescriptionInput);
         typeIn(teamDescriptionInput,teamDescription);
